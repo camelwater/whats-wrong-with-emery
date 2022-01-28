@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const getActiveLocation = () => {
     return window.location.pathname;
-}
+};
 
 const useActiveLocation = () => {
     const [path, setPath] = useState<string>('');
@@ -14,4 +14,4 @@ const useActiveLocation = () => {
     return path;
 }
 
-export default useActiveLocation
+export default useActiveLocation;

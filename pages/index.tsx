@@ -3,6 +3,8 @@ import React from 'react';
 import { ContentWrapper } from '@styles/stitches.config';
 // import 'animate.css/animate.min.css';
 import SmoothScroll from '@components/SmoothScroll';
+import Navigation from '@components/Nav/Nav';
+import Footer from '@components/Footer';
 
 
 const HomePage: React.FC<{ allImages }> = ({ allImages }) => {
@@ -13,8 +15,8 @@ const HomePage: React.FC<{ allImages }> = ({ allImages }) => {
         <title>What&apos;s Wrong With Emery?</title>
       </Head>
       <SmoothScroll />
-      {/* <NavigationComponent isHome/>
-      <FooterComponent /> */}
+      <Navigation isHome/>
+      <Footer />
     </ContentWrapper>
   );
 }

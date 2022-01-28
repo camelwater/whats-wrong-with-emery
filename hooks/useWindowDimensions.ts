@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 type WindowDimensions = {
     width: number
     height: number
-}
+};
  
 const getWindowDimensions = (): WindowDimensions => {
     const { innerWidth, innerHeight } = window;
@@ -12,15 +12,15 @@ const getWindowDimensions = (): WindowDimensions => {
     return {
         width: innerWidth,
         height: innerHeight
-    }
-}
+    };
+};
  
 const useWindowDimensions = (): WindowDimensions => {
     const [windowDimensions, setWindowDimensions] = useState<WindowDimensions>({width: 0, height: 0});
  
     const handleResize = () => {
         setWindowDimensions(getWindowDimensions());
-    }
+    };
  
     useEffect(() => {
         handleResize();
@@ -29,6 +29,6 @@ const useWindowDimensions = (): WindowDimensions => {
     }, []);
  
     return windowDimensions;
-}
+};
 
-export default useWindowDimensions
+export default useWindowDimensions;

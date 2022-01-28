@@ -8,15 +8,15 @@ const StyledButton = styled('button', {
     background: 'none',
     outline: 'none',
     border: 'none',
-    color: '$main',
+    color: '$typefacePrimary',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    transition: '0.1s linear',
+    transition: '0.15s ease',
     position: 'relative',
     cursor: 'pointer',
     '&:hover': {
-        color: '$hover',
+        color: '$primary',
         transform: 'scale(1.05, 1.05)'
     },
     '&:active': {
@@ -26,11 +26,11 @@ const StyledButton = styled('button', {
         variant: {
             desktop: {
                 padding: '5px',
-                border: '2px solid $cardBorder',
-                background: '$lightBackground',
+                border: '2px solid $border',
+                background: '$foreground',
                 borderRadius: '7.5px',
                 '&:hover': {
-                    border: '2px solid $hover',
+                    border: '2px solid $primary',
                     // '$$glow': '$shadows$glow',
                     boxShadow: '$glow'
                 },
