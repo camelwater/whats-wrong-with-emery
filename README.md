@@ -4,6 +4,11 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 Make sure you have [Node.js](https://nodejs.org/en) installed. 
 
+Clone this repository; you can do this by running this in your command line (make sure you run this command in the directory that you intend to store these files in): 
+```bash
+git clone https://www.github.com/camelwater/whats-wrong-with-emery.git
+```
+
 Run the development server after you've navaigated to the project directory (whats-wrong-with-emery):
 
 ```bash
