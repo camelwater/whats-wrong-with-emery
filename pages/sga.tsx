@@ -3,12 +3,12 @@ import Navigation from "@components/Navigation";
 import SmoothScroll from "@components/SmoothScroll";
 import Head from "next/head";
 
-const MessageBoardPage: React.FC = () => {
+const SGAPage: React.FC = () => {
     return (
         <>
             <Head>
                 <title>
-                    Message Board | WWWE?
+                    SGA Portal | WWWE?
                 </title>
             </Head>
             <SmoothScroll />
@@ -18,4 +18,4 @@ const MessageBoardPage: React.FC = () => {
     );
 };
 
-export default MessageBoardPage;
+export default SGAPage;

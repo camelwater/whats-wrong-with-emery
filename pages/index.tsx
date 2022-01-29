@@ -4,7 +4,8 @@ import Head from 'next/head';
 import SmoothScroll from '@components/SmoothScroll';
 import Navigation from '@components/Navigation';
 import Footer from '@components/Footer';
-import Home from '@components/Home'
+import Home from '@components/Home';
+import Mission from '@components/Mission';
 
 // TODO: add TopMessages/RandomMessages prop 
 // as the home page will show random messages from the message board
@@ -18,6 +19,7 @@ const HomePage: React.FC = ( ) => {
       <SmoothScroll />
       <Navigation isHome/>
       <Home />
+      <Mission />
       <Footer />
     </>
   );

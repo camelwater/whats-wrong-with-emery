@@ -1,4 +1,7 @@
 import Head from "next/head";
+import SmoothScroll from "@components/SmoothScroll";
+import Navigation from "@components/Navigation";
+import Footer from "@components/Footer";
 
 const NewsPage: React.FC = () => {
     return (
@@ -8,6 +11,9 @@ const NewsPage: React.FC = () => {
                     News | WWWE?
                 </title>
             </Head>
+            <SmoothScroll />
+            <Navigation />
+            <Footer />
         </>
     );
 };

@@ -1,4 +1,5 @@
 import { styled } from '@styles/stitches.config';
+import { motion } from 'framer-motion';
 
 export const Wrapper = styled('div', {
     marginTop: '100px',
@@ -15,7 +16,7 @@ export const Container = styled('div', {
     flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
-    width: 'var(--width)',
+    width: '75%',
     maxWidth: 'var(--max-width)',
     '@iPad': {
         alignItems: 'center',
@@ -35,11 +36,13 @@ export const IntroContainer = styled('div', {
     rowGap: '3rem',
     '@iPad': {
         alignItems: 'center',
+        textAlign: 'center',
+        justifyContent: 'center',
         maxWidth: '100%'
-    }
+    },
 })
 
-export const ButtonContainer = styled('div', {
+export const ButtonContainer = styled(motion.div, {
     all: 'inherit',
     maxWidth: '100%',
     display: 'grid',
@@ -47,13 +50,13 @@ export const ButtonContainer = styled('div', {
 
 })
 
-export const Title = styled('h1', {
+export const Title = styled(motion.h1, {
     fontFamily: '$main',
     fontSize: '$8',
     color: '$typefaceMain'
 })
 
-export const SubTitle = styled('p', {
+export const SubTitle = styled(motion.p, {
     fontFamily: '$main',
     fontSize: '$5',
     color: '$typefaceMain',

@@ -2,6 +2,7 @@ import * as Styles from './Styles';
 import TextButton from '@components/TextButton';
 import Link from 'next/link';
 import { LinkWrapper } from '@components/SharedStyles';
+import { motion } from 'framer-motion';
 
 const Buttons = [
     {
@@ -18,28 +19,87 @@ const Buttons = [
     }
 ];
 
+const fadeDownVariants = {
+    hidden: {
+        opacity: 0,
+        y: -50,
+    },
+    visible: {
+        opacity: 1,
+        y: 0
+    }
+};
+
+const fadeInLeft = {
+    hidden: {
+        opacity: 0,
+        x: '-100%',
+    },
+    visible: {
+        opacity: 1,
+        x: 0
+    }
+};
+
+const parentVariants = {
+    hidden: {
+        opacity: 0,
+    },
+    visible: {
+        opacity: 1,
+        transition: {
+            type: 'tween',
+            ease: 'easeIn',
+            delayChildren: 0.15,
+            staggerChildren: 0.2,
+            when: 'beforeChildren'
+        }
+    }
+};
+
+const parentVariantsDelay = {
+    hidden: {
+        opacity: 0,
+    },
+    visible: {
+        opacity: 1,
+        transition: {
+            type: 'tween',
+            ease: 'easeIn',
+            delay: .35,
+            delayChildren: 0.15,
+            staggerChildren: 0.2,
+            when: 'beforeChildren'
+        }
+    }
+};
+
 const Home: React.FC = () => {
     return (
         <Styles.Wrapper>
             <Styles.Container>
                 <Styles.IntroContainer>
-                    <Styles.Title>
-                        What&apos;s Wrong With Emery?
-                    </Styles.Title>
-                    <Styles.SubTitle>
-                        Your place to lodge complaints, put forth constructive suggestions, 
-                        and create a lasting contribution to the Emery/Weiner School.
-                    </Styles.SubTitle>
-                    <Styles.ButtonContainer>
+                    <motion.div initial={'hidden'} animate={'visible'} variants={parentVariants}>
+                        <Styles.Title variants={fadeDownVariants}>
+                            What&apos;s Wrong With Emery?
+                        </Styles.Title>
+                        <Styles.SubTitle variants={fadeDownVariants}>
+                            Your place to lodge complaints, put forth constructive suggestions, 
+                            and create a lasting contribution to the Emery/Weiner School.
+                        </Styles.SubTitle>
+                    </motion.div>
+                    <Styles.ButtonContainer initial={'hidden'} animate={'visible'} variants={parentVariantsDelay}>
                         {
                             Buttons.map((button) => (
-                                <Link href={button.link} passHref={true} key={button.text}>
-                                    <LinkWrapper key={button.text}>
-                                        <TextButton large color={button.text=='SGA?'?'red':'blue'}>
-                                            {button.text}
-                                        </TextButton>
-                                    </LinkWrapper>
-                                </Link>
+                                <motion.div key={button.text} variants={fadeInLeft}>
+                                    <Link href={button.link} passHref={true}>
+                                        <LinkWrapper key={button.text}>
+                                            <TextButton large color={button.text=='SGA?'?'red':'blue'}>
+                                                {button.text}
+                                            </TextButton>
+                                        </LinkWrapper>
+                                    </Link>
+                                </motion.div>
                             ))
                         }
                     </Styles.ButtonContainer>
