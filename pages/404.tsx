@@ -4,6 +4,7 @@ import Head from 'next/head'
 import React from 'react';
 import Navigation from '@components/Navigation';
 import Footer from '@components/Footer';
+import NotFound from '@components/NotFound';
 
 const NotFoundPage: React.FC = () => {
     return (
@@ -12,7 +13,7 @@ const NotFoundPage: React.FC = () => {
                 <title>404 - Resource Not Found | WWWE?</title>
             </Head>
             <Navigation />
-            {/* <ErrorComponent /> */}
+            <NotFound />
             <Footer />
         </>
     );

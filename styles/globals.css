@@ -1,7 +1,19 @@
 :root {
-    --max-width: 1400px,
+    --max-width: 1400px;
+    --width: 85%;
+    --width-2: 95%;
+    --width-mobile: 90%
 }
 
 #root, #__next {
     isolation: isolate;
+}
+
+@keyframes color-rotation {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(650deg);
+    }
 }

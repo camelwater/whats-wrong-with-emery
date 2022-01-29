@@ -15,12 +15,12 @@ export const Container = styled('div', {
     flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
-    width: '85%',
+    width: 'var(--width)',
     maxWidth: 'var(--max-width)',
     '@iPad': {
         alignItems: 'center',
         justifyContent: 'center',
-        width: '90%'
+        width: 'var(--width-mobile'
     }
 })
 

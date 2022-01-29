@@ -2,48 +2,7 @@ import { useEffect, useState } from "react";
 import { useTheme } from 'next-themes';
 import { FaSun } from 'react-icons/fa';
 import { RiMoonFill } from 'react-icons/ri';
-import { styled } from '@styles/stitches.config';
-
-const StyledButton = styled('button', {
-    background: 'none',
-    outline: 'none',
-    border: 'none',
-    color: '$typefacePrimary',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    transition: '0.15s ease',
-    position: 'relative',
-    cursor: 'pointer',
-    '&:hover': {
-        color: '$primary',
-        transform: 'scale(1.05, 1.05)'
-    },
-    '&:active': {
-        transform: 'scale(0.95, 0.95)'
-    },
-    variants: {
-        variant: {
-            desktop: {
-                padding: '5px',
-                border: '2px solid $border',
-                background: '$foreground',
-                borderRadius: '7.5px',
-                '&:hover': {
-                    border: '2px solid $primary',
-                    // '$$glow': '$shadows$glow',
-                    boxShadow: '$glow'
-                },
-                
-                '@media (max-width: 700px)': {
-                    display: 'none',
-                }
-            },
-            mobile: {
-            }
-        }
-    }
-})
+import { StyledButton } from '@components/SharedStyles';
 
 
 export const ThemeToggle: React.FC<{ type }> = ({type}) => {

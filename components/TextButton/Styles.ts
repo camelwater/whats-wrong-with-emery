@@ -5,7 +5,7 @@ export const Container = styled('div', {
     cursor: 'pointer',
     position: 'relative',
     '&::after': {
-        transition: 'transform .15s ease, color .25s ease',
+        transition: 'transform 150ms ease, color .25s ease',
         content: '',
         position: 'absolute',
         top: 0,
@@ -50,7 +50,7 @@ export const Container = styled('div', {
         }
     },
     '&:hover::after, &:focus-visible::after': {
-        transform: 'scale(1.2, 1.1)',
+        transform: 'scale(1.1, 1.05)',
         '@reducedMotion': {
             transform: 'none',
             color: '$primary'

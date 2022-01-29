@@ -5,6 +5,7 @@ export const { styled, getCssText, createTheme, globalCss } = createStitches({
     theme: {
       colors: {
         white: '#F4F4F5',
+        dark: '#080808',
         scroll: '#202635',
         scroll2: '#6B7C95',
         scroll3: '#8696AD',
@@ -30,8 +31,8 @@ export const { styled, getCssText, createTheme, globalCss } = createStitches({
         lightBorder: '#141414',
         highlight: '#e5e8ee40',
         blueGradient: 'linear-gradient(135deg, #916aff 3%, #6788ff 100%)',
-        redGradient: 'linear-gradient(115deg, #d66b6b 5%, rgba(204, 57, 138, 1) 100%)'
-        //   'linear-gradient(93.05deg, #EF9797 3.98%, rgba(206, 126, 199, 0.801616) 35.29%, #A364D6 68.78%, #A1D0F9 97.44%)',
+        redGradient: 'linear-gradient(115deg, #d66b6b 5%, rgba(204, 57, 138, 1) 100%)',
+        gradient: 'linear-gradient(93.05deg, #EF9797 3.98%, rgba(206, 126, 199, 0.801616) 35.29%, #A364D6 68.78%, #A1D0F9 97.44%)',
       },
       shadows: {
         medium: '0px 4px 12px #1818207f, 0px 8px 16px #13131fdf',
@@ -46,7 +47,7 @@ export const { styled, getCssText, createTheme, globalCss } = createStitches({
         4: '1.125rem',
         5: '1.25rem',
         6: '1.5rem',
-        7: '2rem',
+        7: '2.5rem',
         8: '4rem',
       },
       fonts: {
@@ -68,17 +69,21 @@ export const { styled, getCssText, createTheme, globalCss } = createStitches({
 
 export const lightTheme = createTheme(({
   colors: {
-    white: '#F4F4F5',
-    scrollMain: '#5a636e',
-    scrollMain2: '#363c44',
-    main: '#465261',
-    main2: '#556275',
-    main3: '#191c22',
-    primary: '#dadae2',
-    dark: '#F4F4F5',
+    scroll: '#b9bcc2',
+    scroll2: '#5a636e',
+    scroll3: '#363c44',
+    primary: '#2264c7',
+    secondary: '#7197dd',
+    tertiary: '#132b41',
+    typefaceMain: '#191c22',
+    typefacePrimary: '#6c809e',
+    typefaceSecondary: '#556275',
+    typefaceTertiary: '#191c22',
+    border: '#bebebe',
     lightBackground: '#d6d6eb',
     background: '#e9e9e9',
-    navBackground: '#e9e9f1',
+    foreground: '#d7d9db',
+    navBackground: '#ebebee',
     lightBorder: '#dfdfdf',
     dropdownBackground: '#f5f5f5',
     dropdownBorder: '#e0e0e0',
@@ -88,14 +93,12 @@ export const lightTheme = createTheme(({
     dividerColor: '#8379df',
     cardColor: '#d2d2ee',
     dropdownHover: '#e9e9e9',
-    highlight: '#2e2e2e30',
-    gradient:
-      'linear-gradient(93.05deg, #EF9797 3.98%, rgba(206, 126, 199, 0.801616) 35.29%, #A364D6 68.78%, #A1D0F9 97.44%)',
+    highlight: '#36363630',
   }, 
   shadows: {
     medium: '0px 4px 12px #a09cb37f, 0px 8px 24px #b1aec7ff',
     mediumDrop: 'drop-shadow(0px 6px 6px #a09cb3af) drop-shadow(0px 4px 12px #b1aec7ff)',
-    glow: '0px 0px 12px #b3acf1df, 0px 0px 32px #bab7eedf'
+    glow: '0px 0px 12px #6ea8cadf, 0px 0px 32px #9fd3e79f'
   },
 }))
 

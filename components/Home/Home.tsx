@@ -26,16 +26,18 @@ const Home: React.FC = () => {
                         What&apos;s Wrong With Emery?
                     </Styles.Title>
                     <Styles.SubTitle>
-                        Your place to complain about Emery&apos;s problems, put forth constructive suggestions, 
-                        and create a lasting contribution.
+                        Your place to lodge complaints, put forth constructive suggestions, 
+                        and create a lasting contribution to the Emery/Weiner School.
                     </Styles.SubTitle>
                     <Styles.ButtonContainer>
                         {
                             Buttons.map((button) => (
                                 <Link href={button.link} passHref={true} key={button.text}>
-                                    <TextButton large color={button.text=='SGA?'?'red':'blue'}>
-                                        {button.text}
-                                    </TextButton>
+                                    <a style={{all: 'revert'}}>
+                                        <TextButton large color={button.text=='SGA?'?'red':'blue'}>
+                                            {button.text}
+                                        </TextButton>
+                                    </a>
                                 </Link>
                             ))
                         }

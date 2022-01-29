@@ -3,6 +3,7 @@ import * as NavMenu from './NavMenu.styles';
 import React, { useState } from 'react';
 import useActiveLocation from '@hooks/useActiveLocation';
 import { ThemeToggle } from '@components/ThemeToggle';
+import Search from '@components/Search';
 import Link from 'next/link';
 import { HiMenuAlt4, HiOutlineX } from 'react-icons/hi';
 
@@ -78,7 +79,7 @@ const Navigation: React.FC<{isHome?: boolean}> = ({isHome}) => {
                 <NavBar.NavContainer>
                     <NavBar.LinksContainer>
                         <Link href='/' passHref={true}>
-                            <NavBar.TitleLinkText variant={isHome?'home':'rest'}>WWWE.</NavBar.TitleLinkText>
+                            <NavBar.TitleLinkText variant={isHome?'home':'rest'}>WWWE?</NavBar.TitleLinkText>
                         </Link>
                         <NavBar.NavItems>
                                 {Links.map((entry, index) => (
@@ -109,6 +110,7 @@ const Navigation: React.FC<{isHome?: boolean}> = ({isHome}) => {
                         >
                             Repo
                         </NavBar.ButtonLink> */}
+                        <Search type='desktop' />
                         <ThemeToggle type='desktop' />
                     </NavBar.RightLinksContainer>
                     <NavMenu.MenuButton onClick={ToggleNav}> {/* Mobile Menu Button */}
@@ -138,6 +140,7 @@ const Navigation: React.FC<{isHome?: boolean}> = ({isHome}) => {
                     </NavMenu.Menu>
                     <NavMenu.BottomMenu>
                         <ThemeToggle type='mobile' />
+                        <Search type='mobile' />
                         {/* <NavBar.ButtonLink href='' target='_blank' variant='mobile'>
                             Repo
                         </NavBar.ButtonLink> */}

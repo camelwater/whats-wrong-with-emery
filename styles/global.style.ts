@@ -32,7 +32,7 @@ const globalStyle = globalCss({
     textDecoration: 'none',
     zIndex: 99,
     paddingTop: '0.1rem',
-    paddingBottom: '0.1rem',
+    paddingBottom: '0.05rem',
     background: 'linear-gradient(0deg, $secondary, $secondary) no-repeat left bottom / 0 .1rem',
     transition: 'background-size 250ms, color 150ms',
     '&:where(:hover, :focus-visible)': {

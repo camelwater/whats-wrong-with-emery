@@ -50,7 +50,7 @@ export const LinksContainer = styled('div', {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    height: '50%',
+    height: '55%',
     // border: '1px solid white'
 })
 
@@ -112,7 +112,7 @@ export const NavLink = styled('p', {
     margin: '0 15px',
     fontFamily: '$main',
     opacity: 1,
-    transition: '0.15s ease',
+    transition: '150ms ease',
     // '@iPadPro':{
     //     fontSize: '$2'
     // },
@@ -133,7 +133,7 @@ export const LinkBox = styled('div', {
     '&:hover': {
         // backgroundColor: '$linkHover',
         [`${NavLink}`]: {
-            color: '$white'
+            color: '$typefaceMain'
         }
     },
     '&.active': {
@@ -145,7 +145,7 @@ export const LinkBox = styled('div', {
 
 export const LinkBoxBackground = styled(motion.div, {
     position: 'absolute',
-    borderRadius: '0.75rem',
+    borderRadius: '0.7rem',
     width: '100%',
     height: '100%',
     backgroundColor: '$linkHover',
