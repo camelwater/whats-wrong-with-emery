@@ -53,7 +53,8 @@ export const ButtonContainer = styled(motion.div, {
 export const Title = styled(motion.h1, {
     fontFamily: '$main',
     fontSize: '$8',
-    color: '$typefaceMain'
+    color: '$typefaceMain',
+    marginBottom: '1.5rem'
 })
 
 export const SubTitle = styled(motion.p, {

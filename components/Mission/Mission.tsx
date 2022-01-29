@@ -62,7 +62,7 @@ const Mission: React.FC = () => {
                     </Styles.Description>
                     <Styles.Description variants={childrenVariants}>
                         It was created because a common issue continues to plague the school: 
-                        there are many minute problems that arise that become major nuisances due to the difficulty in voicing concerns. 
+                        there arise many minute problems that become major nuisances due to the difficulty in voicing concerns. 
                     </Styles.Description>
                     <Styles.Description variants={childrenVariants}>
                         Although a student government exists, we do not hear often of changes made by them,
@@ -70,7 +70,12 @@ const Mission: React.FC = () => {
                         as a lengthy lunch line or the absence of good cups.
                     </Styles.Description>
                     <Styles.Description variants={childrenVariants}>
-                        <strong>What&apos;s Wrong With Emery?</strong> is here to change that.
+                        Furthermore, as a student, you have no insight, guarantee, or 
+                        confidence that what you ask for is being given the proper consideration; you just don&apos;t know what&apos;s going on.
+                        No one likes being left in the dark.
+                    </Styles.Description>
+                    <Styles.Description variants={childrenVariants}>
+                        <strong>What&apos;s Wrong With Emery?</strong> seeks to change that.
                     </Styles.Description>
                 </Styles.DescriptionContainer>
                 
