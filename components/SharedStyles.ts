@@ -6,7 +6,7 @@ export const Wrapper = styled('div', {
     width: '100vw',
     justifyContent: 'center',
     alignItems: 'center',
-})
+});
 
 export const GradientTitle = styled('h1', {
     display: 'inline-block',
@@ -16,7 +16,7 @@ export const GradientTitle = styled('h1', {
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
     fontFamily: '$main',
-})
+});
 
 export const StyledButton = styled('button', {
     background: 'none',
@@ -57,4 +57,9 @@ export const StyledButton = styled('button', {
             }
         }
     }
+});
+
+export const LinkWrapper = styled('a', {
+    all: 'initial',
+    textDecoration: 'none'
 })

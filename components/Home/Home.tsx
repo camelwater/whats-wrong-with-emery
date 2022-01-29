@@ -1,6 +1,7 @@
 import * as Styles from './Styles';
 import TextButton from '@components/TextButton';
 import Link from 'next/link';
+import { LinkWrapper } from '@components/SharedStyles';
 
 const Buttons = [
     {
@@ -32,13 +33,13 @@ const Home: React.FC = () => {
                     <Styles.ButtonContainer>
                         {
                             Buttons.map((button) => (
-                                <Link href={button.link} passHref={true} key={button.text}>
-                                    <a style={{all: 'revert'}}>
+                                // <Link href={button.link} passHref={true} key={button.text}>
+                                    <LinkWrapper key={button.text}>
                                         <TextButton large color={button.text=='SGA?'?'red':'blue'}>
                                             {button.text}
                                         </TextButton>
-                                    </a>
-                                </Link>
+                                    </LinkWrapper>
+                                // </Link>
                             ))
                         }
                     </Styles.ButtonContainer>

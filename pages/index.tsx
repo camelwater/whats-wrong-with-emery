@@ -1,6 +1,5 @@
-import Head from 'next/head';
 import React from 'react';
-import { ContentWrapper } from '@styles/stitches.config';
+import Head from 'next/head';
 // import 'animate.css/animate.min.css';
 import SmoothScroll from '@components/SmoothScroll';
 import Navigation from '@components/Navigation';

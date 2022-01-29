@@ -31,7 +31,7 @@ export const Container = styled('div', {
         },
         size: {
             large: {
-                padding: '.75rem 2.5rem',
+                padding: '1rem 2.5rem',
                 borderRadius: '.5rem',
                 fontSize: '$6',
                 '&::after': {
@@ -40,7 +40,7 @@ export const Container = styled('div', {
 
             },
             small: {
-                padding: '.5rem 1.5rem',
+                padding: '.75rem 1.5rem',
                 borderRadius: '.3rem',
                 fontSize: '$4',
                 '&::after': {
@@ -51,9 +51,15 @@ export const Container = styled('div', {
     },
     '&:hover::after, &:focus-visible::after': {
         transform: 'scale(1.1, 1.05)',
-        '@reducedMotion': {
+        '@reduceMotion': {
             transform: 'none',
             color: '$primary'
+        }
+    },
+    '&:active::after': {
+        transform: 'scale(0.9, 0.95)',
+        '@reduceMotion': {
+            transform: 'none'
         }
     }
 })

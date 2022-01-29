@@ -24,7 +24,7 @@ const globalStyle = globalCss({
   },
   '::selection': {
     background: '$highlight',
-    color: '$primary'
+    color: '$primary',
   },
   a: {
     color: '$primary',

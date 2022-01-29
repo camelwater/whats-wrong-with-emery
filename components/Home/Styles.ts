@@ -20,7 +20,7 @@ export const Container = styled('div', {
     '@iPad': {
         alignItems: 'center',
         justifyContent: 'center',
-        width: 'var(--width-mobile'
+        width: 'var(--width-mobile)'
     }
 })
 
