@@ -33,13 +33,13 @@ const Home: React.FC = () => {
                     <Styles.ButtonContainer>
                         {
                             Buttons.map((button) => (
-                                // <Link href={button.link} passHref={true} key={button.text}>
+                                <Link href={button.link} passHref={true} key={button.text}>
                                     <LinkWrapper key={button.text}>
                                         <TextButton large color={button.text=='SGA?'?'red':'blue'}>
                                             {button.text}
                                         </TextButton>
                                     </LinkWrapper>
-                                // </Link>
+                                </Link>
                             ))
                         }
                     </Styles.ButtonContainer>
