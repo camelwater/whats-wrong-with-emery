@@ -3,21 +3,24 @@ import React from 'react';
 import { ContentWrapper } from '@styles/stitches.config';
 // import 'animate.css/animate.min.css';
 import SmoothScroll from '@components/SmoothScroll';
-import Navigation from '@components/Nav/Nav';
+import Navigation from '@components/Navigation';
 import Footer from '@components/Footer';
+import Home from '@components/Home'
 
-
-const HomePage: React.FC<{ allImages }> = ({ allImages }) => {
+// TODO: add TopMessages/RandomMessages prop 
+// as the home page will show random messages from the message board
+const HomePage: React.FC = ( ) => {
 
   return (
-    <ContentWrapper>
+    <>
       <Head>
         <title>What&apos;s Wrong With Emery?</title>
       </Head>
       <SmoothScroll />
       <Navigation isHome/>
+      <Home />
       <Footer />
-    </ContentWrapper>
+    </>
   );
 }
 

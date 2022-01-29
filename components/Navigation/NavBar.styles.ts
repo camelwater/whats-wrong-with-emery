@@ -71,7 +71,7 @@ export const TitleLinkText = styled('a', {
     fontFamily: '$mono',
     fontSize: '$6',
     fontWeight: 'bold',
-    color: '$typefacePrimary',
+    color: '$typefaceSecondary',
     textDecoration: 'none',
     transition: '0.15s ease',
     variants: {

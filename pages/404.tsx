@@ -1,18 +1,19 @@
 // import FooterComponent from '@components/Footer/Footer';
-// import NavigationComponent from '@components/Nav/Navigation';
 // import ErrorComponent from '@components/404/404';
 import Head from 'next/head'
 import React from 'react';
+import Navigation from '@components/Navigation';
+import Footer from '@components/Footer';
 
 const NotFoundPage: React.FC = () => {
     return (
         <>
             <Head>
-                <title>RR. | 404</title>
+                <title>404 - Resource Not Found | WWWE?</title>
             </Head>
-            {/* <NavigationComponent />
-            <ErrorComponent />
-            <FooterComponent /> */}
+            <Navigation />
+            {/* <ErrorComponent /> */}
+            <Footer />
         </>
     );
 }  

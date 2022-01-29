@@ -1,0 +1,17 @@
+.nav-enter {
+    opacity: 0;
+}
+
+.nav-enter-active {
+    opacity: 1;
+    transition: opacity 150ms ease, transform 150ms ease;
+}
+
+.nav-exit {
+    opacity: 1;
+}
+
+.nav-exit-active {
+    opacity: 0;
+    transition: opacity 150ms ease, transform 150ms ease;
+}

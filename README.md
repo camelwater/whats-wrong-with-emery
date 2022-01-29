@@ -14,7 +14,7 @@ Run the development server after you've navaigated to the project directory (wha
 ```bash
 npm run dev # use this one if you are using Node
 # or
-yarn dev # ignore this if you do not have Yarn
+yarn dev # ignore this since you are using Node (unless if you have Yarn installed)
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

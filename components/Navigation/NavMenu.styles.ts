@@ -55,7 +55,7 @@ export const Menu = styled('div', {
     // zIndex: 999999,
     display: 'flex',
     flexDirection: 'column',
-    borderRight: '1px solid $cardBorder',
+    borderRight: '1px solid $border',
     // justifyContent: 'center',
     // textAlign: 'center',
     padding: '5rem 1rem 5rem',
@@ -89,8 +89,7 @@ export const MenuButton = styled('button', {
     transition: '0.15s ease',
     cursor: 'pointer',
     '&:hover': {
-        color: '$foreground',
-        // transform: 'rotate(180deg)'
+        color: '$primary',
     },
     '&:active': {
         transform: 'scale(0.75, 0.75)'
@@ -114,7 +113,7 @@ export const SubMenuLevel = styled('div', {
     margin: '0 10px 20px 10px',
     transition: '0.25s ease',
     '&:hover': {
-        color: '$foreground'
+        color: '$primary'
     }
 })
 
@@ -132,7 +131,7 @@ export const MenuLink = styled('a', {
     transition: '0.15s ease',
     // borderBottom: '2.5px solid $white',
     '&:hover': {
-        color: '$foreground'
+        color: '$primary'
     }
 })
 
@@ -146,14 +145,14 @@ export const SubMenuLink = styled('a', {
     margin: '0 10px 20px 25px',
     transition: '0.25s ease',
     '&:hover': {
-        color: '$foreground'
+        color: '$primary'
     }
 })
 
 export const BottomMenu = styled('div', {
-    background: '$primary',
+    background: '$foreground',
     borderTop: '1px solid $primary',
-    borderRight: '1px solid $cardBorder',
+    borderRight: '1px solid $border',
     paddingLeft: '1rem',
     paddingRight: '1rem',
     display: 'flex',

@@ -4,6 +4,8 @@ import globalStyle from './global.style';
 export const { styled, getCssText, createTheme, globalCss } = createStitches({
     theme: {
       colors: {
+        white: '#F4F4F5',
+        scroll: '#202635',
         scroll2: '#6B7C95',
         scroll3: '#8696AD',
         primary: '#2a7cda',
@@ -11,7 +13,7 @@ export const { styled, getCssText, createTheme, globalCss } = createStitches({
         tertiary: '#132841',
         typefaceMain: '#F4F4F5',
         typefacePrimary: '#6c809e',
-        typefaceSeconary: '#8696AD',
+        typefaceSecondary: '#8696AD',
         typefaceTertiary: '#adbcd1',
         border: '#363e47',
         lightBackground: '#152130',
@@ -22,13 +24,14 @@ export const { styled, getCssText, createTheme, globalCss } = createStitches({
         linkHover: '#313131',
         dividerColor: '#5f55f0',
         cardColor: '#282546',
-        navBackground: '#1b1b24',
+        navBackground: '#151a1f',
         dropdownBackground: '#141414',
         dropdownBorder: '#303030',
         lightBorder: '#141414',
         highlight: '#e5e8ee40',
-        gradient:
-          'linear-gradient(93.05deg, #EF9797 3.98%, rgba(206, 126, 199, 0.801616) 35.29%, #A364D6 68.78%, #A1D0F9 97.44%)',
+        blueGradient: 'linear-gradient(135deg, #916aff 3%, #6788ff 100%)',
+        redGradient: 'linear-gradient(115deg, #d66b6b 5%, rgba(204, 57, 138, 1) 100%)'
+        //   'linear-gradient(93.05deg, #EF9797 3.98%, rgba(206, 126, 199, 0.801616) 35.29%, #A364D6 68.78%, #A1D0F9 97.44%)',
       },
       shadows: {
         medium: '0px 4px 12px #1818207f, 0px 8px 16px #13131fdf',
@@ -44,6 +47,7 @@ export const { styled, getCssText, createTheme, globalCss } = createStitches({
         5: '1.25rem',
         6: '1.5rem',
         7: '2rem',
+        8: '4rem',
       },
       fonts: {
         main: 'GTWalsheimPro, sans-serif',
@@ -57,12 +61,14 @@ export const { styled, getCssText, createTheme, globalCss } = createStitches({
       iPhonePlus: '(max-width: 414px)',
       iPhone: '(max-width: 375px)',
       iPhoneSE: '(max-width: 320px)',
-      reducedMotion: "(prefers-reduced-motion)"
+      prefersMotion: 'not (prefers-reduced-motion)',
+      reduceMotion: "(prefers-reduced-motion)"
     },
 })
 
 export const lightTheme = createTheme(({
   colors: {
+    white: '#F4F4F5',
     scrollMain: '#5a636e',
     scrollMain2: '#363c44',
     main: '#465261',
@@ -70,7 +76,6 @@ export const lightTheme = createTheme(({
     main3: '#191c22',
     primary: '#dadae2',
     dark: '#F4F4F5',
-    white: '#2c2c2c',
     lightBackground: '#d6d6eb',
     background: '#e9e9e9',
     navBackground: '#e9e9f1',

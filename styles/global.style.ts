@@ -12,7 +12,9 @@ const globalStyle = globalCss({
   html: {
     overflowX: 'hidden',
     height: '100%',
+    font: '112.5%/1.45 GTWalsheimPro'
   },
+  
   body: {
     background: '$background',
     overflowX: 'clip',
@@ -51,8 +53,8 @@ const globalStyle = globalCss({
   },
   'body::-webkit-scrollbar-thumb': {
     background: '$scroll2',
-    borderRadius: '5px',
-    border: '2px solid $scrollBorder'
+    borderRadius: '4px',
+    border: '2px solid $scroll'
   },
   'body::-webkit-scrollbar-thumb:hover': {
     background: '$scroll3',
