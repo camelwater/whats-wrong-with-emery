@@ -4,12 +4,13 @@ export const FooterCenter = styled('div', {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    width: '85%',
-    maxWidth: '1200px',
-    '@media screen and (max-width: 400px)': {
+    width: 'var(--width)',
+    maxWidth: 'var(--max-width)',
+    '@media screen and (max-width: 450px)': {
         flexWrap: 'wrap',
+        width: 'var(--width-mobile)',
         rowGap: '5px',
-        justifyContent: 'center'
+        justifyContent: 'center',
     },
 })
 export const Footer = styled('div', {
@@ -30,6 +31,9 @@ export const Footer = styled('div', {
 export const FooterContainer = styled('div', {
     display: 'flex',
     alignItems: 'center',
+    flexWrap: 'wrap',
+    // overflowWrap: 'break-word',
+    // wordWrap: 'break-word',
 })
 
 export const LinkText = styled('a', {
@@ -41,6 +45,7 @@ export const LinkText = styled('a', {
     color: '$typefaceSecondary',
     marginRight: 15,
     transition: '0.1s linear',
+    // textAlign: 'justify',
     '&:hover': {
         color: '$secondary',
         transform: 'scale(1.1, 1.1)'
@@ -59,6 +64,7 @@ export const LinkText = styled('a', {
 export const FooterText = styled('p', {
     fontFamily: '$mono', 
     display: 'flex',
+    flexWrap: 'wrap',
     fontSize: '$2',
     alignItems: 'center',
     justifyContent: 'center',
@@ -73,7 +79,21 @@ export const FooterText = styled('p', {
             fontSize: '$2'
         }
     },
-    paddingRight: '.75rem'
+    // paddingRight: '.75rem'
+})
+
+export const FooterText2 = styled(FooterText, {
+    svg: {
+        fontSize: '$2',
+    },
+    '@Flip': {
+        svg: {
+            fontSize: '$1'
+        }
+    },
+    '@media screen and (max-width: 300px)': {
+        fontSize: '12px'
+    }
 })
 
 export const FooterLinkText = styled('a', {

@@ -17,10 +17,7 @@ const Footer: React.FC = () => {
                 </Styles.FooterContainer>
 
                 <Styles.FooterContainer>
-                    <Styles.FooterText><FaRegCopyright size={'1rem'}/>{new Date().getFullYear()} ConcernedEmeryStudents&nbsp;</Styles.FooterText>
-                    {/* <Styles.LinkText href='https://www.github.com/camelwater' target='_blank'>
-                        <FiGithub size={'1.5rem'}/>
-                    </Styles.LinkText> */}
+                    <Styles.FooterText2><FaRegCopyright />{new Date().getFullYear()} ConcernedEmeryStudents</Styles.FooterText2>
                 </Styles.FooterContainer>
             </Styles.FooterCenter>
         </Styles.Footer>

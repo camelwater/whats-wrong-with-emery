@@ -54,12 +54,18 @@ export const Title = styled(motion.h1, {
     fontFamily: '$main',
     fontSize: '$8',
     color: '$typefaceMain',
-    marginBottom: '1.5rem'
+    marginBottom: '1.5rem',
+    '@Flip': {
+        fontSize: '$7'
+    }
 })
 
 export const SubTitle = styled(motion.p, {
     fontFamily: '$main',
     fontSize: '$5',
     color: '$typefaceMain',
-    marginBottom: '1.5rem'
+    marginBottom: '1.5rem',
+    '@Flip': {
+        fontSize: '$4'
+    }
 })

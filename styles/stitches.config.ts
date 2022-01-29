@@ -72,7 +72,7 @@ export const lightTheme = createTheme(({
     scroll: '#b9bcc2',
     scroll2: '#5a636e',
     scroll3: '#363c44',
-    primary: '#2264c7',
+    primary: '#3a73c9',
     secondary: '#7197dd',
     tertiary: '#132b41',
     typefaceMain: '#191c22',
@@ -98,7 +98,7 @@ export const lightTheme = createTheme(({
   shadows: {
     medium: '0px 4px 12px #a09cb37f, 0px 8px 24px #b1aec7ff',
     mediumDrop: 'drop-shadow(0px 6px 6px #a09cb3af) drop-shadow(0px 4px 12px #b1aec7ff)',
-    glow: '0px 0px 12px #6ea8cadf, 0px 0px 32px #9fd3e79f'
+    glow: '0px 0px 12px #83bfe26f, 0px 0px 32px #afdcee9f'
   },
 }))
 

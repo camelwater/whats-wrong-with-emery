@@ -99,8 +99,8 @@ export const TitleLinkText = styled('a', {
     '&:active': {
         transform: 'scale(0.95, 0.95)'
     },
-    '@iPhoneSE': {
-      fontSize: '$2',
+    '@Flip': {
+      fontSize: '$5',
     },
   })
 

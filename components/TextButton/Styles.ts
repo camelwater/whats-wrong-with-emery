@@ -1,5 +1,21 @@
 import { styled } from '@styles/stitches.config';
 
+export const Text = styled('p', {
+    fontFamily: '$main',
+    color: '$white',
+    textAlign: 'center',
+    variants: {
+        size: {
+            large: {
+                fontSize: '$6'
+            },
+            small: {
+                fontSize: '$4',
+            }
+        }
+    }
+})
+
 export const Container = styled('div', {
     display: 'inline-block',
     cursor: 'pointer',
@@ -53,29 +69,12 @@ export const Container = styled('div', {
         transform: 'scale(1.1, 1.05)',
         '@reduceMotion': {
             transform: 'none',
-            color: '$primary'
         }
     },
     '&:active::after': {
         transform: 'scale(0.9, 0.95)',
         '@reduceMotion': {
             transform: 'none'
-        }
-    }
-})
-
-export const Text = styled('p', {
-    fontFamily: '$main',
-    color: '$white',
-    textAlign: 'center',
-    variants: {
-        size: {
-            large: {
-                fontSize: '$6'
-            },
-            small: {
-                fontSize: '$4',
-            }
         }
     }
 })

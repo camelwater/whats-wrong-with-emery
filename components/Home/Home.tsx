@@ -66,7 +66,7 @@ const parentVariantsDelay = {
         transition: {
             type: 'tween',
             ease: 'easeIn',
-            delay: .35,
+            delay: .25,
             delayChildren: 0.15,
             staggerChildren: 0.2,
             when: 'beforeChildren'
@@ -88,7 +88,7 @@ const Home: React.FC = () => {
                             and create a lasting contribution to the Emery/Weiner School.
                         </Styles.SubTitle>
                     </motion.div>
-                    <Styles.ButtonContainer initial={'hidden'} animate={'visible'} variants={parentVariantsDelay}>
+                    <Styles.ButtonContainer initial={'hidden'} whileInView={'visible'} viewport={{ once: true }} variants={parentVariantsDelay}>
                         {
                             Buttons.map((button) => (
                                 <motion.div key={button.text} variants={fadeInLeft}>
