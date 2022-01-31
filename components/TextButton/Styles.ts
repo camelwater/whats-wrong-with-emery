@@ -21,7 +21,7 @@ export const Container = styled('div', {
     cursor: 'pointer',
     position: 'relative',
     '&::after': {
-        transition: 'transform 150ms ease, color .25s ease',
+        transition: 'transform 200ms ease, color .25s ease',
         content: '',
         position: 'absolute',
         top: 0,
@@ -66,7 +66,7 @@ export const Container = styled('div', {
         }
     },
     '&:hover::after, &:focus-visible::after': {
-        transform: 'scale(1.1, 1.05)',
+        transform: 'scale(1.15, 1.1)',
         '@reduceMotion': {
             transform: 'none',
         }
