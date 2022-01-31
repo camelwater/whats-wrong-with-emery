@@ -10,7 +10,7 @@ export const Nav = styled('nav', {
     right: 0,
     alignItems: 'center',
     width: '100vw',
-    transition: '450ms ease',
+    transition: '350ms ease',
     variants: {
         variant: {
             home: {
