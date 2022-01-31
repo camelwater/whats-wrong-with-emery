@@ -2,7 +2,8 @@ import { styled } from '@styles/stitches.config';
 
 export const FooterCenter = styled('div', {
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
+    // justifyContent: 'space-between',
     alignItems: 'center',
     width: 'var(--width)',
     maxWidth: 'var(--max-width)',
@@ -10,7 +11,7 @@ export const FooterCenter = styled('div', {
         flexWrap: 'wrap',
         width: 'var(--width-mobile)',
         rowGap: '5px',
-        justifyContent: 'center',
+        // justifyContent: 'center',
     },
 })
 export const Footer = styled('div', {

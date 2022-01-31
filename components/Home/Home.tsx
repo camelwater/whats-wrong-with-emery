@@ -3,6 +3,8 @@ import TextButton from '@components/TextButton';
 import Link from 'next/link';
 import { LinkWrapper } from '@components/SharedStyles';
 import { motion } from 'framer-motion';
+import MessageCard from '@components/MessageCard';
+import CardCollection from '@components/CardCollection';
 
 const Buttons = [
     {
@@ -57,6 +59,21 @@ const parentVariants = {
     }
 };
 
+const cardVariants = {
+    hidden: {
+        opacity: 0,
+    },
+    visible: {
+        opacity: 1,
+        transition: {
+            type: 'tween',
+            ease: 'easeIn',
+            delay: .5,
+            staggerChildren: 0.15,
+        }
+    }
+}
+
 const parentVariantsDelay = {
     hidden: {
         opacity: 0,
@@ -104,7 +121,13 @@ const Home: React.FC = () => {
                         }
                     </Styles.ButtonContainer>
                 </Styles.IntroContainer>
-                {/* <FloatingMessages num={5}/> */}
+                {/* <motion.div initial='hidden' animate='visible' variants={cardVariants}> */}
+                    {/* <MessageCard showButtons={false}/> */}
+                <Styles.CardContainer>
+                    <CardCollection preview />
+                </Styles.CardContainer>
+                {/* </motion.div> */}
+                
             </Styles.Container>
         </Styles.Wrapper>
     );

@@ -2,18 +2,17 @@ import { styled } from '@styles/stitches.config';
 import { motion } from 'framer-motion';
 
 export const Wrapper = styled('div', {
-    marginTop: '100px',
+    marginTop: '50px',
     display: 'flex',
     width: '100vw',
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: '10vw',
     // clipPath: 'polygon(50% 0%, 100% 0, 100% 75%, 50% 100%, 0 75%, 0 0)',
-})
+});
 
 export const Container = styled('div', {
     display: 'flex',
-    flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
     width: '75%',
@@ -23,7 +22,17 @@ export const Container = styled('div', {
         justifyContent: 'center',
         width: 'var(--width-mobile)'
     }
-})
+});
+
+export const CardContainer = styled('div', {
+    position: 'relative',
+    display: 'flex',
+    width: '100%',
+    zIndex: 0,
+    '@iPad': {
+        display: 'none'
+    }
+});
 
 export const IntroContainer = styled('div', {
     marginTop: '75px',
@@ -34,13 +43,14 @@ export const IntroContainer = styled('div', {
     overflowWrap: 'break-word',
     wordWrap: 'break-word',
     rowGap: '3rem',
+    zIndex: 1,
     '@iPad': {
         alignItems: 'center',
         textAlign: 'center',
         justifyContent: 'center',
         maxWidth: '100%'
     },
-})
+});
 
 export const ButtonContainer = styled(motion.div, {
     all: 'inherit',
@@ -48,7 +58,7 @@ export const ButtonContainer = styled(motion.div, {
     display: 'grid',
     margin: '0',
 
-})
+});
 
 export const Title = styled(motion.h1, {
     fontFamily: '$main',
@@ -58,7 +68,7 @@ export const Title = styled(motion.h1, {
     '@Flip': {
         fontSize: '$7'
     }
-})
+});
 
 export const SubTitle = styled(motion.p, {
     fontFamily: '$main',
@@ -68,4 +78,4 @@ export const SubTitle = styled(motion.p, {
     '@Flip': {
         fontSize: '$4'
     }
-})
+});

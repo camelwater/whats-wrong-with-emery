@@ -4,25 +4,25 @@ import { motion } from 'framer-motion';
 export const Nav = styled('nav', {
     display: 'flex',
     justifyContent: 'center',
-    position: 'fixed',
-    isolation: 'isolate',
     zIndex: 9999,
     top: 0,
     left: 0,
     right: 0,
-    background: '$navBackground',
-    borderBottom: '1px solid $lightBorder',
     alignItems: 'center',
     width: '100vw',
-    transition: '.15s ease',
-
+    transition: '450ms ease',
     variants: {
         variant: {
             home: {
-                height: '75px'
+                position: 'relative',
+                marginTop: '25px',
+                height: '75px',
             },
             rest: {
-                height: '75px'
+                position: 'fixed',
+                background: '$navBackground',
+                borderBottom: '1px solid $lightBorder',
+                height: '75px',
             }
         }
     }

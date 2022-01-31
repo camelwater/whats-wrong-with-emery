@@ -20,7 +20,7 @@ const globalStyle = globalCss({
     overflowX: 'clip',
     fontFamily: 'GTWalsheimPro',
     height: '100%',
-    transition: '150ms ease'
+    transition: '450ms ease'
   },
   '::selection': {
     background: '$highlight',

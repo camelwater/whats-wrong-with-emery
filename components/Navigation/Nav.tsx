@@ -44,7 +44,7 @@ const fadeVariants = {
     }
 }
 
-const Navigation: React.FC<{isHome?: boolean}> = ({isHome}) => {
+const Navigation: React.FC<{ home?: boolean }> = ({ home }) => {
     const Links = [
         {
             name: 'Board',
@@ -75,14 +75,14 @@ const Navigation: React.FC<{isHome?: boolean}> = ({isHome}) => {
         <> 
                         
             {/* Desktop */}
-            <NavBar.Nav variant={isHome?'home':'rest'}>
+            <NavBar.Nav variant={home?'home':'rest'}>
                 <NavBar.NavContainer>
                     <NavBar.LinksContainer>
                         <Link href='/' passHref={true}>
-                            <NavBar.TitleLinkText variant={isHome?'home':'rest'}>WWWE?</NavBar.TitleLinkText>
+                            <NavBar.TitleLinkText variant={home?'home':'rest'}>WWWE?</NavBar.TitleLinkText>
                         </Link>
                         <NavBar.NavItems>
-                                {Links.map((entry, index) => (
+                                {!home && Links.map((entry, index) => (
                                     <Link href={entry.link} passHref={true} key={index}>
                                         <NavBar.LinkBox 
                                             className={activePage===entry.link?'active':''} 

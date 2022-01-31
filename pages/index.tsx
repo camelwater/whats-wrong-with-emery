@@ -17,10 +17,10 @@ const HomePage: React.FC = ( ) => {
         <title>What&apos;s Wrong With Emery?</title>
       </Head>
       <SmoothScroll />
-      <Navigation isHome/>
+      <Navigation home/>
       <Home />
       <Mission />
-      <Footer />
+      <Footer home/>
     </>
   );
 }

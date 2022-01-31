@@ -12,14 +12,15 @@ export const { styled, getCssText, createTheme, globalCss } = createStitches({
         primary: '#2a7cda',
         secondary: '#7cb0ec',
         tertiary: '#132841',
+        negative: '#da2a50',
         typefaceMain: '#F4F4F5',
         typefacePrimary: '#6c809e',
         typefaceSecondary: '#8696AD',
         typefaceTertiary: '#adbcd1',
-        border: '#363e47',
+        border: '#1d2227',
         lightBackground: '#152130',
         background: '#101820',
-        foreground: '#252c33',
+        foreground: '#171e24',
         dropdownHover: '#050505',
         hover: '#5145bd',
         linkHover: '#313131',
@@ -37,7 +38,8 @@ export const { styled, getCssText, createTheme, globalCss } = createStitches({
       shadows: {
         medium: '0px 4px 12px #1818207f, 0px 8px 16px #13131fdf',
         mediumDrop: 'drop-shadow(0px 6px 6px #0f0e14af) drop-shadow(0px 4px 12px #0000005f)',
-        glow: '0px 0px 12px #3c80a7df, 0px 0px 32px #54a0be9f'
+        glow: '0px 0px 12px #3c80a7df, 0px 0px 32px #54a0be9f',
+        largeGlow: '0px 0px 24px #3c80a7df, 0px 0px 48px #54a0be9f'
 
       },
       fontSizes: {
@@ -72,17 +74,18 @@ export const lightTheme = createTheme(({
     scroll: '#b9bcc2',
     scroll2: '#5a636e',
     scroll3: '#363c44',
-    primary: '#3a73c9',
-    secondary: '#7197dd',
+    primary: '#2a85da',
+    secondary: '#7cbfec',
     tertiary: '#132b41',
+    negative: '#c93a52',
     typefaceMain: '#191c22',
     typefacePrimary: '#6c809e',
     typefaceSecondary: '#556275',
     typefaceTertiary: '#191c22',
-    border: '#bebebe',
+    border: '#dddddd',
     lightBackground: '#d6d6eb',
     background: '#e9e9e9',
-    foreground: '#d7d9db',
+    foreground: '#e2e4e5',
     navBackground: '#ebebee',
     lightBorder: '#dfdfdf',
     dropdownBackground: '#f5f5f5',
@@ -98,7 +101,8 @@ export const lightTheme = createTheme(({
   shadows: {
     medium: '0px 4px 12px #a09cb37f, 0px 8px 24px #b1aec7ff',
     mediumDrop: 'drop-shadow(0px 6px 6px #a09cb3af) drop-shadow(0px 4px 12px #b1aec7ff)',
-    glow: '0px 0px 12px #83bfe26f, 0px 0px 32px #afdcee9f'
+    glow: '0px 0px 12px #83bfe26f, 0px 0px 32px #afdcee9f',
+    largeGlow: '0px 0px 24px #83bfe26f, 0px 0px 48px #afdcee9f'
   },
 }))
 
@@ -109,38 +113,38 @@ export const ContentWrapper = styled('div', {
   // height: '100%'
 })
 
-export const lightGlobalStyles = globalCss({
-  "@light": {
-    ":root:not(.dark)": {
-      ...Object.keys(lightTheme.colors).reduce((varSet, currentColorKey) => {
-        const currentColor = lightTheme.colors[currentColorKey];
-        const currentColorValue =
-          currentColor.value.substring(0, 1) === "$"
-            ? `$colors${currentColor.value}`
-            : currentColor.value;
+// export const lightGlobalStyles = globalCss({
+//   "@light": {
+//     ":root:not(.dark)": {
+//       ...Object.keys(lightTheme.colors).reduce((varSet, currentColorKey) => {
+//         const currentColor = lightTheme.colors[currentColorKey];
+//         const currentColorValue =
+//           currentColor.value.substring(0, 1) === "$"
+//             ? `$colors${currentColor.value}`
+//             : currentColor.value;
 
-        return {
-          [currentColor.variable]: currentColorValue,
-          ...varSet,
-        };  
-      }, {}),
+//         return {
+//           [currentColor.variable]: currentColorValue,
+//           ...varSet,
+//         };  
+//       }, {}),
 
-      ...Object.keys(lightTheme.shadows).reduce((varSet, curShadowKey) => {
-        const currentShadow = lightTheme.shadows[curShadowKey];
-        const currentShadowValue =
-          currentShadow.value.substring(0, 1) === "$"
-            ? `$shadows${currentShadow.value}`
-            : currentShadow.value;
+//       ...Object.keys(lightTheme.shadows).reduce((varSet, curShadowKey) => {
+//         const currentShadow = lightTheme.shadows[curShadowKey];
+//         const currentShadowValue =
+//           currentShadow.value.substring(0, 1) === "$"
+//             ? `$shadows${currentShadow.value}`
+//             : currentShadow.value;
 
-        return {
-          [currentShadow.variable]: currentShadowValue,
-          ...varSet,
-        };
-      }, {}),
-    },
-  },
-});
+//         return {
+//           [currentShadow.variable]: currentShadowValue,
+//           ...varSet,
+//         };
+//       }, {}),
+//     },
+//   },
+// });
 
-lightGlobalStyles();
+// lightGlobalStyles();
 
 globalStyle();
