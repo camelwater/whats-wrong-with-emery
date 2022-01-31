@@ -26,7 +26,7 @@ export const StyledButton = styled('button', {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    transition: 'all 0.15s ease, background var(--transition) ease',
+    transition: 'all 0.15s ease, background var(--transition-theme)',
     position: 'relative',
     cursor: 'pointer',
     '&:hover': {

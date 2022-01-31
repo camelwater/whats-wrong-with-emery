@@ -39,13 +39,21 @@ const CardCollection: React.FC<{ preview?: boolean, num?: number, sort?: SortTyp
         <Styles.Container variant={preview?'preview':'normal'} initial='initial' animate='visible' variants={Anims.parentVariants}>
             {
                 messages.map((message, index) => (
-                    <animated.div style={{ transform: to(props.xy, trans) }} key={index}> 
-                        <motion.div variants={preview?Anims.previewVariants:Anims.normalVariants}>
-                            <FloatingComponent>
-                                <MessageCard showButtons={!preview} pos={preview?positions[index]:null}/>
-                            </FloatingComponent>
-                        </motion.div>
-                    </animated.div>
+                    preview ? (
+                        <animated.div style={{ transform: to(props.xy, trans) }} key={index}> 
+                            <motion.div variants={preview?Anims.previewVariants:Anims.normalVariants}>
+                                <FloatingComponent>
+                                    <MessageCard showButtons={!preview} pos={preview?positions[index]:null}/>
+                                </FloatingComponent>
+                            </motion.div>
+                        </animated.div>
+                        ) : (
+                            <motion.div variants={preview?Anims.previewVariants:Anims.normalVariants}>
+                                <FloatingComponent>
+                                    <MessageCard showButtons={!preview} pos={preview?positions[index]:null}/>
+                                </FloatingComponent>
+                            </motion.div>
+                        )  
             ))}
         </Styles.Container>
     );
