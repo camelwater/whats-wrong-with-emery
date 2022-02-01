@@ -2,6 +2,7 @@ import Footer from "@components/Footer";
 import Navigation from "@components/Navigation";
 import SmoothScroll from "@components/SmoothScroll";
 import Head from "next/head";
+import MessageBoard from "@components/MessageBoard";
 
 const MessageBoardPage: React.FC = () => {
     return (
@@ -13,6 +14,7 @@ const MessageBoardPage: React.FC = () => {
             </Head>
             <SmoothScroll />
             <Navigation />
+            <MessageBoard />
             <Footer />
         </>
     );

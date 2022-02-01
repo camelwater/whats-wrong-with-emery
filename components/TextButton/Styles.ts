@@ -14,7 +14,7 @@ export const Text = styled('p', {
             }
         }
     }
-})
+});
 
 export const Container = styled('div', {
     display: 'inline-block',
@@ -77,4 +77,8 @@ export const Container = styled('div', {
             transform: 'none'
         }
     }
-})
+});
+
+export const Link = styled('a', {
+    all: 'revert'
+});

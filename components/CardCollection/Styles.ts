@@ -14,7 +14,7 @@ export const Container = styled(motion.div, {
                 left: '-55%',
                 zIndex: -1,
                 opacity: .75,
-                filter: 'blur(1.25px)',
+                filter: 'blur(1px)',
             },
             normal: {
 

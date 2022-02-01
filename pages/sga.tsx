@@ -2,6 +2,7 @@ import Footer from "@components/Footer";
 import Navigation from "@components/Navigation";
 import SmoothScroll from "@components/SmoothScroll";
 import Head from "next/head";
+import SGA from "@components/SGA";
 
 const SGAPage: React.FC = () => {
     return (
@@ -13,6 +14,7 @@ const SGAPage: React.FC = () => {
             </Head>
             <SmoothScroll />
             <Navigation />
+            <SGA />
             <Footer />
         </>
     );

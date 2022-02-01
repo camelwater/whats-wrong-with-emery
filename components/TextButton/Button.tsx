@@ -1,15 +1,27 @@
+/* eslint-disable react/display-name */
 import * as Styles from './Styles';
+import React from 'react';
 
 type ColorVariant = 'red' | 'blue';
 
-const TextButton: React.FC<{ children?, large?: boolean, color: ColorVariant }> = ({ children=null, large=null, color }) => {
+const TextButton: React.FC<{ children?, large?: boolean, color: ColorVariant, onClick?, href?: string }> = React.forwardRef(({ children, large, color, onClick, href }, ref) => {
     return (
-        <Styles.Container size={large?'large':'small'} variant={color}>
-            <Styles.Text size={large?'large':'small'}>
-                {children}
-            </Styles.Text>
-        </Styles.Container>
+        href? (
+            <Styles.Link href={href} onClick={onClick}>
+                <Styles.Container size={large?'large':'small'} variant={color}>
+                    <Styles.Text size={large?'large':'small'}>
+                        {children}
+                    </Styles.Text>
+                </Styles.Container>
+            </Styles.Link>
+        ) : (
+            <Styles.Container size={large?'large':'small'} variant={color} onClick={onClick}>
+                <Styles.Text size={large?'large':'small'}>
+                    {children}
+                </Styles.Text>
+            </Styles.Container>
+        )
     );
-};
+});
 
 export default TextButton;

@@ -1,10 +1,10 @@
 import * as Styles from './Styles';
 import TextButton from '@components/TextButton';
 import Link from 'next/link';
-import { LinkWrapper } from '@components/SharedStyles';
-import { motion } from 'framer-motion';
-import MessageCard from '@components/MessageCard';
+// import { LinkWrapper } from '@components/SharedStyles';
+import { motion, useReducedMotion } from 'framer-motion';
 import CardCollection from '@components/CardCollection';
+import * as Animations from '@animations/index';
 
 const Buttons = [
     {
@@ -22,7 +22,7 @@ const Buttons = [
 ];
 
 const fadeDownVariants = {
-    hidden: {
+    initial: {
         opacity: 0,
         y: -50,
     },
@@ -33,7 +33,7 @@ const fadeDownVariants = {
 };
 
 const fadeInLeft = {
-    hidden: {
+    initial: {
         opacity: 0,
         x: '-100%',
     },
@@ -44,7 +44,7 @@ const fadeInLeft = {
 };
 
 const parentVariants = {
-    hidden: {
+    initial: {
         opacity: 0,
     },
     visible: {
@@ -60,7 +60,7 @@ const parentVariants = {
 };
 
 const cardVariants = {
-    hidden: {
+    initial: {
         opacity: 0,
     },
     visible: {
@@ -75,7 +75,7 @@ const cardVariants = {
 }
 
 const parentVariantsDelay = {
-    hidden: {
+    initial: {
         opacity: 0,
     },
     visible: {
@@ -92,37 +92,36 @@ const parentVariantsDelay = {
 };
 
 const Home: React.FC = () => {
+    const reduceMotion = useReducedMotion();
+    
     return (
         <Styles.Wrapper>
             <Styles.Container>
                 <Styles.IntroContainer>
-                    <motion.div initial={'hidden'} animate={'visible'} variants={parentVariants}>
-                        <Styles.Title variants={fadeDownVariants}>
+                    <motion.div initial={'initial'} animate={'visible'} variants={parentVariants}>
+                        <Styles.Title variants={reduceMotion?Animations.reducedVariants:fadeDownVariants}>
                             What&apos;s Wrong With Emery?
                         </Styles.Title>
-                        <Styles.SubTitle variants={fadeDownVariants}>
+                        <Styles.SubTitle variants={reduceMotion?Animations.reducedVariants:fadeDownVariants}>
                             Your place to lodge complaints, put forth constructive suggestions, 
                             and create a lasting contribution to the Emery/Weiner School.
                         </Styles.SubTitle>
                     </motion.div>
-                    <Styles.ButtonContainer initial={'hidden'} whileInView={'visible'} viewport={{ once: true }} variants={parentVariantsDelay}>
+                    <Styles.ButtonContainer initial={'initial'} whileInView={'visible'} viewport={{ once: true }} variants={parentVariantsDelay}>
                         {
                             Buttons.map((button) => (
-                                <motion.div key={button.text} variants={fadeInLeft}>
-                                    <Link href={button.link} passHref={true}>
-                                        <LinkWrapper key={button.text}>
-                                            <TextButton large color={button.text=='SGA?'?'red':'blue'}>
-                                                {button.text}
-                                            </TextButton>
-                                        </LinkWrapper>
+                                <motion.div key={button.text} variants={reduceMotion?Animations.reducedVariants:fadeInLeft}>
+                                    <Link href={button.link} passHref>
+                                        <TextButton large color={button.text=='SGA?'?'red':'blue'}>
+                                            {button.text}
+                                        </TextButton>
                                     </Link>
                                 </motion.div>
                             ))
                         }
                     </Styles.ButtonContainer>
                 </Styles.IntroContainer>
-                {/* <motion.div initial='hidden' animate='visible' variants={cardVariants}> */}
-                    {/* <MessageCard showButtons={false}/> */}
+                {/* <motion.div initial='initial' animate='visible' variants={cardVariants}> */}
                 <Styles.CardContainer>
                     <CardCollection preview />
                 </Styles.CardContainer>

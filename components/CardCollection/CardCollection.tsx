@@ -1,11 +1,12 @@
 import * as Styles from './Styles';
 import * as Anims from './Anims';
 import MessageCard from '@components/MessageCard';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { animated, useSpring , to } from 'react-spring';
 import useMouseLocation from '@hooks/useMouseLocation';
 import FloatingComponent from '@components/FloatingComponent';
 import { useCollectionPositions } from './utils';
+import * as Animations from '@animations/index';
 
 type SortType = 'random' | 'date' | 'top';
 
@@ -14,7 +15,7 @@ const calcNewPos = (x: number, y: number) => [
     y - window.innerHeight / (Math.random() + 2)
 ];
 
-const trans = (x: number, y: number) => `translate3d(${x / 10 + 100}px,${y / 10}px,0)`;
+const trans = (x: number, y: number) => `translate3d(${x / 15 + 100}px,${y / 15}px,0)`;
 
 const CardCollection: React.FC<{ preview?: boolean, num?: number, sort?: SortType}> = ({ preview, num=25, sort='random' }) => {
     const [props, setPos]: any = useSpring(() => ({
@@ -34,12 +35,13 @@ const CardCollection: React.FC<{ preview?: boolean, num?: number, sort?: SortTyp
     }
 
     const positions = useCollectionPositions(num);
+    const reduceMotion = useReducedMotion();
     
     return (
         <Styles.Container variant={preview?'preview':'normal'} initial='initial' animate='visible' variants={Anims.parentVariants}>
             {
                 messages.map((message, index) => (
-                    preview ? (
+                    (preview && !reduceMotion) ? (
                         <animated.div style={{ transform: to(props.xy, trans) }} key={index}> 
                             <motion.div variants={preview?Anims.previewVariants:Anims.normalVariants}>
                                 <FloatingComponent>
@@ -48,7 +50,7 @@ const CardCollection: React.FC<{ preview?: boolean, num?: number, sort?: SortTyp
                             </motion.div>
                         </animated.div>
                         ) : (
-                            <motion.div variants={preview?Anims.previewVariants:Anims.normalVariants}>
+                            <motion.div variants={reduceMotion?Animations.reducedVariants:(preview?Anims.previewVariants:Anims.normalVariants)} key={index}>
                                 <FloatingComponent>
                                     <MessageCard showButtons={!preview} pos={preview?positions[index]:null}/>
                                 </FloatingComponent>

@@ -25,6 +25,9 @@
         ],
         "@utils/*": [
             "utils/*"
+        ],
+        "@animations/*": [
+            "animations/*"
         ]
       },
       "target": "es6",

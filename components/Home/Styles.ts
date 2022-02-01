@@ -79,3 +79,4 @@ export const SubTitle = styled(motion.p, {
         fontSize: '$4'
     }
 });
+
