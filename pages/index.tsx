@@ -9,7 +9,7 @@ import Mission from '@components/Mission';
 
 // TODO: add TopMessages/RandomMessages prop 
 // as the home page will show random messages from the message board
-const HomePage: React.FC = ( ) => {
+const HomePage: React.FC = () => {
 
   return (
     <>
