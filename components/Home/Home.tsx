@@ -59,21 +59,6 @@ const parentVariants = {
     }
 };
 
-const cardVariants = {
-    initial: {
-        opacity: 0,
-    },
-    visible: {
-        opacity: 1,
-        transition: {
-            type: 'tween',
-            ease: 'easeIn',
-            delay: .5,
-            staggerChildren: 0.15,
-        }
-    }
-}
-
 const parentVariantsDelay = {
     initial: {
         opacity: 0,

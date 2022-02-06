@@ -5,7 +5,7 @@ import { RiMoonFill } from 'react-icons/ri';
 import { StyledButton } from '@components/SharedStyles';
 
 
-export const ThemeToggle: React.FC<{ type }> = ({type}) => {
+export const ThemeToggle: React.FC<{ type: any }> = ({ type }) => {
     const [mounted, setMounted] = useState(false);
     const { setTheme, resolvedTheme } = useTheme();
   

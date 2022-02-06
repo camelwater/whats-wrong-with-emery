@@ -12,8 +12,8 @@ const getMouseLocation = (e: MouseEvent): MouseLocation => {
     };
 };
  
-const useMouseLocation = (calcPos, setPos): MouseLocation => {
-    const [mouseLocation, setMouseLocation] = useState<MouseLocation>({x: 0, y: 0});
+const useMouseLocation = (calcPos: CallableFunction, setPos: CallableFunction): MouseLocation => {
+    const [mouseLocation, setMouseLocation] = useState<MouseLocation>({ x: 0, y: 0 });
 
     const handleMouseMove = useCallback((e: MouseEvent) => {
         setMouseLocation(getMouseLocation(e));

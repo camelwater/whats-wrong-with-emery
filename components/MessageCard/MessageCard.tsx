@@ -1,9 +1,9 @@
 import * as Styles from './Styles';
 import { MdKeyboardArrowUp, MdKeyboardArrowDown, MdChatBubbleOutline } from 'react-icons/md';
 
-const MessageCard: React.FC<{ showButtons?: boolean, pos? }> = ({ showButtons=true, pos=null }) => {
+const MessageCard: React.FC<{ showButtons?: boolean, pos?: number[] | null }> = ({ showButtons=true, pos=null }) => {
     return (
-        <Styles.CardContainer variant={pos?'preview':'normal'} style={pos?{ left: pos[0], top: pos[1]}: {}}>
+        <Styles.CardContainer variant={pos?'preview':'normal'} style={pos?{ left: pos[0], top: pos[1] }: {}}>
             <Styles.Card variant={showButtons?'normal':'preview'}>
                 <Styles.ContentContainer>
                     <Styles.Title>You suck</Styles.Title>

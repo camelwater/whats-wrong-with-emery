@@ -38,7 +38,6 @@
       ],
       "allowJs": true,
       "skipLibCheck": true,
-      "strict": false,
       "forceConsistentCasingInFileNames": true,
       "noEmit": true,
       "incremental": true,
@@ -47,7 +46,10 @@
       "moduleResolution": "node",
       "resolveJsonModule": true,
       "isolatedModules": true,
-      "jsx": "preserve"
+      "jsx": "preserve",
+      "sourceMap": true,
+      "outDir": "dist",
+      "strict": true,
     },
     "exclude": [
       "node_modules"
