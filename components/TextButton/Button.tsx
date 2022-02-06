@@ -4,7 +4,7 @@ import React from 'react';
 
 type ColorVariant = 'red' | 'blue';
 
-const TextButton: React.FC<{ children?, large?: boolean, color: ColorVariant, onClick?, href?: string }> = React.forwardRef(({ children, large, color, onClick, href }, ref) => {
+const TextButton: React.FC<{ children?: any, large?: boolean, color: ColorVariant, onClick?: any, href?: string }> = React.forwardRef(({ children, large, color, onClick, href }, ref) => {
     return (
         href? (
             <Styles.Link href={href} onClick={onClick}>
